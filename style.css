@@ -1,0 +1,86 @@
+:root{
+    --accent: #6c5ce7;
+    --bg: #f1c40f;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg);
+}
+
+.card-holder{
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.card{
+  width: 20rem;
+  background-color: var(--accent);
+  color: #fff;
+  margin: 2rem auto;
+}
+
+.card__name{
+  font-size: 1.7em;
+}
+
+.card__img{
+  width: 100%;
+  height: 12rem;
+  object-fit: cover;
+}
+
+.card-contents{
+  padding: 1rem;
+}
+
+h1{
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+p{
+  font-size: 0.8em;
+  margin-bottom: 1rem;
+}
+
+.card__read-more{
+  display: block;
+  opacity: 0;
+  height: 0;
+  transition: all 0.5s;
+}
+
+.card__read-more--open{
+  display: block;
+  opacity: 1;
+  height: 5rem;
+}
+
+.read-more-btn{
+  display: inline-block;
+  color: var(--accent);
+  background-color: #eee;
+  padding: 0.6rem 1.5rem;
+  font-size: 1em;
+  position: relative;
+  z-index: 1;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.read-more-btn:hover{
+  background-color: #fff;
+  box-shadow: 0 0 2rem rgba(0,0,0,0.1);
+  transform: translateY(-3px);
+}
